@@ -30,7 +30,7 @@
 </div>	
 @else
 <a href="{!! route('users.edit', Auth::user()->id) !!}">Edit Profile</a>
-<a href="{!! route('home') !!}">Take Test</a>
+<a href="{!! route('take-test', Auth::user()->id) !!}">Take Test</a>
 <a href="{!! route('home') !!}">See result</a>
 @endif		
 @endsection

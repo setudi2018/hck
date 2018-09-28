@@ -9,6 +9,7 @@ use Mail;
 use Hash;
 use Carbon\Carbon;
 use Auth;
+use App\Question;
 
 class UsersController extends Controller
 {
@@ -216,6 +217,12 @@ class UsersController extends Controller
         return Redirect::back()->with('error','Please enter correct current password');
       }
     }
+  }
+
+  public function test($id)
+  {
+    $questions = Question::all();
+    return view('admin.test', compact('questions'));
   }
 
 }

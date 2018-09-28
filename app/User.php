@@ -18,6 +18,10 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function department()
+    {
+        return $this->belongsTo('App\Department');
+    }
     public function setFileAttribute($file) {
         $source_path = upload_tmp_path($file);
         if ($file && file_exists($source_path)) 

@@ -1,36 +1,42 @@
 @extends('admin.layouts.panel')
-@section('title','Dashboard')
+@section('title','Take Test')
 @section('content')
-@if(Auth::user()->role != 'interviewer')
-<div class="row clearfix progress-box">
-	<div class="col-lg-3 col-md-6 col-sm-12 mb-30">
-		<div class="bg-white pd-20 box-shadow border-radius-5 height-100-p">
-			<div class="project-info clearfix">
-				<div class="project-info-left">
-					<div class="icon box-shadow bg-blue text-white">
-						<i class="fa fa-users"></i>
-					</div>
-				</div>
-				<div class="project-info-right">
-					<span class="no text-blue weight-500 font-24">{!! $users !!}</span>
-					<p class="weight-400 font-18">Users</p>
-				</div>
-			</div>
-			<div class="project-info-progress">
-				<div class="row clearfix">
-					<div class="col-sm-6 text-muted weight-500">Target</div>
-					<div class="col-sm-6 text-right weight-500 font-14 text-muted">{!! $users !!}</div>
-				</div>
-				<div class="progress" style="height: 10px;">
-					<div class="progress-bar bg-blue progress-bar-striped progress-bar-animated" role="progressbar" style="width: {!! $users !!}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-				</div>
+<div class="min-height-200px">
+	<!-- Contextual classes Start -->
+	<div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
+		<div class="clearfix mb-20">
+			<div class="pull-left">
+				<h4 class="text-blue">Questions For {!! Auth::user()->department->name !!}</h4>
 			</div>
 		</div>
+		<div class="table-responsive">
+			@if(count($questions) > 0)
+			<table class="table id="questions" class="display" cellspacing="0" width="100%">
+				<tbody>
+					@foreach($questions as $key => $question)
+					<tr>
+						<th scope="col">Question {!! $key + 1 !!} : {!! $question->question !!}</th>
+					</tr>
+					<tr>
+						<td><i>Option A : </i>{!! $question->a !!}</td>
+					</tr>
+					<tr>
+						<td><i>Option B : </i>{!! $question->b !!}</td>
+					</tr>
+					<tr>
+						<td><i>Option C : </i>{!! $question->c !!}</td>
+					</tr>
+					<tr>
+						<td><i>Option D : </i>{!! $question->d !!}</td>
+					</tr>
+					@endforeach
+				</tbody>
+			</table>
+			@else
+			<p>No Questions Found.</p>
+			@endif
+		</div>
 	</div>
-</div>	
-@else
-<a href="{!! route('users.edit', Auth::user()->id) !!}">Edit Profile</a>
-<a href="{!! route('home') !!}">Take Test</a>
-<a href="{!! route('home') !!}">See result</a>
-@endif		
+
+</div>
 @endsection

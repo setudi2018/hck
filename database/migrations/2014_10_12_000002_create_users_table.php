@@ -39,7 +39,6 @@ class CreateUsersTable extends Migration
             $table->string('date_of_today', 255)->nullable();
             $table->string('post_applied', 255)->nullable();
             $table->string('reference', 255)->nullable();
-            $table->string('department', 255)->nullable();
             $table->string('notice_period', 255)->nullable(); 
             $table->string('nationality', 255)->nullable();
             $table->string('blood_group', 255)->nullable();
