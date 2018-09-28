@@ -1,0 +1,39 @@
+Sections:
+
+Welcome Page : Welcome to krishaweb Leave Portal.
+Login Screen : Login with your credentials.
+Dashboard : 
+
+	Employee Section :
+		Welcome Page: Design dashboard page.
+			1. Hr
+				1.1 Leaves
+					1.1.1 Can update status of leave application of employee.
+					1.1.2 Can apply own leave application.
+				1.2 Reports
+					1.2.1 Can generate report of leaves.
+				1.3 Excel
+					1.3.1 Can upload time sheet of employee
+			2. Team Lead
+				2.1 Leaves
+					2.1.1 Can update status of leave application of their juniors.
+					2.1.2 Can apply own leave application.
+				2.2 Reports
+					2.2.1 Can generate report of leaves.
+
+
+	Admin Section :
+		Welcome Page: Design dashboard page with graph.
+			Four buttons.
+			Flow :
+				Add Department, Add Employee, and See all Leaves.
+				1. Can add new department.
+				2. Can add new employee and assign them junior.
+				3. Can see all leaves.
+				4. Can update status of leave application.
+			Graph :
+				Month wise leaves.
+				Employee wise leaves.
+
+
+

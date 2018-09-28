@@ -1,0 +1,36 @@
+Sections:
+
+Welcome Page : Welcome to krishaweb Quote Portal.
+Login Screen : Login with your credentials.
+Dashboard : 
+
+	Employee Section :
+		Welcome Page: Design dashboard page.
+			1. Sales person
+				1.1 Leads
+					1.1.1 Can CRU the lead.
+					1.1.2 Can assign this lead to any team lead.
+				1.2. Clients
+					1.2.1 Can CRU the client, timezone and industry.
+			2. Team Lead
+				2.1 Leads
+					2.1.1 Can give quote for their respective department.
+
+
+	Admin Section :
+		Welcome Page: Design dashboard page with graph.
+			Four buttons.
+			Flow :
+				Add Department, Add Employee, Add Lead, Add client, Add Industry and See all Leads.
+				1. Can add new department.
+				2. Can add new employee and assign them department.
+				3. Can add new lead.
+				4. Can add new client.
+				5. Can add new industry.
+				6. Can see all leads.
+					6.1 Can view any one lead's detail.
+			Graph :
+				Month wise leads.
+				Employee wise leads.
+
+
