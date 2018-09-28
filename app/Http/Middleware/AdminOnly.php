@@ -29,5 +29,6 @@ class AdminOnly
             }
             
         }
+        return redirect()->intended('/login')->with('info','You do not have rights to access this location'); 
     }
 }
